@@ -1,3 +1,5 @@
+require(mosum)
+
 #' Multiple change point detection under a static factor model
 #'
 #' Produces estimates of multiple change points due to changes 
@@ -51,6 +53,7 @@
 #' @references Alessi, L., Barigozzi, M., & Capasso, M. (2010) Improved 
 #' penalization for determining the number of factors in approximate static 
 #' factor models. Statistics and Probability Letters, 80:1806-1813.
+#' @importFrom mosum eta_criterion_help
 #' @export
 mosum.fts <- function(x, G, r = NULL, 
                       V.diag = TRUE, lrv = TRUE, m = floor(dim(x)[2]^.25),
@@ -337,4 +340,3 @@ duan_dgp <- function(n, p, type, dep = FALSE){
   return(list(x = x, r = r, k0 = k0, type = type))
   
 }
-
